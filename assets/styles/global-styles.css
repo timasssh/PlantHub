@@ -1,0 +1,54 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+/* title */
+@font-face {
+    font-family: 'Montserrat';
+    src: url(../fonts/Montserrat-Regular.ttf) format('truetype');
+}
+/* main */
+@font-face {
+    font-family: 'Lato';
+    src: url(../fonts/Lato-Regular.ttf) format('truetype');
+}
+/* emphasis */
+@font-face {
+    font-family: 'BreeSerif';
+    src: url(../fonts/BreeSerif-Regular.ttf) format('truetype');
+}
+
+:root {
+    --title-font: 'Montserrat';
+    --main-font: 'Lato';
+    --emphasis-font: 'BreeSerif';
+}
+:root .lightTheme {
+    --primary-color: #4CAF50;
+    --secondary-color: #8BC34A;
+    --emphasis-color: #FF5722;
+    --backdround-color: #FFFFFF;
+    --primary-text-color: #333333;
+    --secondary-text-color: #757575;
+}
+:root .darkTheme {
+    --primary-color: #388E3C;
+    --secondary-color: #689F38;
+    --emphasis-color: #FF9800;
+    --backdround-color: #263238;
+    --primary-text-color: #FFFFFF;
+    --secondary-text-color: #B0BEC5;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--backdround-color);
+    color: var(--primary-text-color);
+    font-family: var(--main-font);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--title-font);
+}
