@@ -1,0 +1,234 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    min-height: 100vh;
+}
+header {
+    display: grid;
+    background-color: #cecece;
+    gap: 5px;
+}
+.logo {
+    font-size: 1.8rem;
+}
+.header_search {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1px;
+}
+.header_bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+}
+.header_menu {
+    display: flex;
+    gap: 3px;
+}
+.header_icon_btn {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.header_menu a:nth-child(3){
+    display: none;
+}
+nav {
+    display: none;
+    visibility: hidden;
+}
+nav.active{
+    visibility: visible;
+    width: 50vw;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background-color: #666;
+    position: absolute;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    padding: 1%;
+    gap: 3px;
+}
+nav.active button{
+    cursor: pointer;
+    background-color: #666;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    transition: ease-in-out 0.3s;
+}
+nav.active button:hover {
+    background-color: #aaa;
+}
+@media only screen and (min-width: 470px) {
+    nav {
+        display: flex;
+        visibility: visible;
+        border-top: solid 1px black;
+    }
+    nav button#closeNavMenu {
+        display: none;
+    }
+    .header_menu > img {
+        display: none;
+    }
+    .header_menu a:nth-child(3){
+        display: inline;
+    }
+    nav button:not(#closeNavMenu) {
+        width: calc(100vw / 5);
+        background-color: #cecece;
+        border: none;
+    }
+    nav button:not(#closeNavMenu):hover {
+        background-color: #dedede;
+    }
+}
+
+main > * {
+    margin: 3px;
+    background-color: #dedede;
+}
+.categorias {
+    background-color: #cecece;
+    height: 60vh;
+}
+.recomendados {
+    display: flex;
+    flex-direction: column;
+}
+.carrousel {
+    display: flex;
+    height: 20vh;
+    gap: 4px;
+}
+.carrousel .carrousel_control {
+    cursor: pointer;
+    height: 20%;
+    align-self: center;
+}
+.produtos {
+    height: 100%;
+    width: 100%;
+    background-color: #666;
+    display: flex;
+    overflow: hidden;
+}
+.produtos div {
+    height: 100%;
+    min-width: 50%;
+    background-color: #fff;
+    transform: translateX(-00%);
+    transition: 0.3s ease-in-out;
+}
+.produtos div:nth-child(odd) {
+    background-color: #aaa;
+}
+
+.ver_catalogo {
+    cursor: pointer;
+    width: 30%;
+    margin: 4px;
+    padding: 10px;
+    background-color: tomato;
+    align-self: center;
+    border: none;
+    transition: 0.4s ease-in-out;
+}
+.ver_catalogo:hover {
+    opacity: 0.8;
+}
+
+footer {
+    padding: 0.9rem;
+    background-color: #dedede;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+.footer_btn {
+    cursor: pointer;
+    align-self: center;
+    background-color: chartreuse;
+    border: none;
+    padding: 10px;
+    transition: 0.4s ease-in-out;
+}
+.footer_btn:hover {
+    opacity: 0.8;
+}
+
+.social_media_links .social_media {
+    cursor: pointer;
+    display: flex;
+    gap: 3px;
+    color: initial;
+    text-decoration: none;
+}
+.social_media_links span {
+    background-color: #000;
+    display: block;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+}
+
+.catalog {
+    display: grid;
+    grid-template-areas:
+    'header header header header header header'
+    'left left main main main main';
+    background-color: #2196F3;
+    padding: 10px;
+  }
+.catalog .links_bar {
+    grid-area: header;
+    text-align: start;
+}
+.shop_filter {
+    grid-area: left;
+    background-color: tomato;
+}
+.shop_products {
+    background-color: rgba(255, 255, 255, 0.8);
+    grid-area: main;
+    height: 80vh;
+}
+.catalog > * {
+    text-align: center;
+    min-height: 1rem;
+}
+
+article .blog_publications {
+    gap: 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.4rem;
+}
+article .blog_publications div {
+    width: 90%;
+    height: 20vh;
+    background-color: #e21;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+}
+.contact section{
+    background-color: #36f;
+    min-width: 70%;
+    min-height: 40vh;
+    align-self: center;
+    justify-self: center;
+}
