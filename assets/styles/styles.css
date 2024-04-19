@@ -74,7 +74,10 @@ nav.active button:hover {
         visibility: visible;
         border-top: solid 1px black;
     }
-    nav button#closeNavMenu {
+    nav button {
+        padding: 10px;
+    }
+    nav > button {
         display: none;
     }
     .header_menu > img {
@@ -97,9 +100,24 @@ main > * {
     margin: 3px;
     background-color: #dedede;
 }
-.categorias {
+.categories {
     background-color: #cecece;
-    height: 60vh;
+}
+.categories_header {
+    text-align: center;
+}
+.categories_content {
+    height: 50vh;
+}
+.div_categorie {
+    width: 100%;
+    height: calc(50vh/5);
+    border: 1px black solid;
+    background-color: #e21;
+}
+.div_categorie a {
+    text-decoration: none;
+    color: initial;
 }
 .recomendados {
     display: flex;
